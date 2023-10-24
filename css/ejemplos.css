@@ -1,0 +1,57 @@
+/* Estilos para centrar la sección de ejemplos */
+.page-ejemplos {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cartas se ajusten automáticamente a la siguiente fila */
+    justify-content: space-between; /* Distribuye las cartas horizontalmente con un espacio entre ellas */
+}
+
+.ejemplo {
+    width: calc(33.33% - 10px); /* Ajusta el ancho para mostrar tres cartas en una fila, con un pequeño espacio entre ellas */
+    margin-bottom: 20px; /* Añade un margen inferior entre las cartas */
+    padding: 20px;
+    background-color: #2e4053;
+    color: #f3f3f3;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #f3f3f3;
+    background: #2e4053;
+    padding: 15px;
+}
+
+.ejemplo h3 {
+    color: #0074e4;
+    font-size: 18px;
+}
+
+.ejemplo p {
+    font-size: 16px; /* Aumentamos el tamaño de fuente para los párrafos */
+    line-height: 1.4;
+}
+
+.ejemplo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Media query para hacer que los ejemplos se coloquen uno debajo del otro en pantallas más estrechas */
+@media (max-width: 768px) {
+    .ejemplo {
+        width: 100%; /* Ocupan el 100% del ancho, uno debajo del otro */
+    }
+}

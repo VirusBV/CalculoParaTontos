@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="../../css/ejemplos.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+</head>
+
+<body>
+    <!-- PORTADA -->
+    <header>
+        <div class="header-content">
+            <div class "logo">
+                <img src="../../img/asset/logo-calculoparatontos.png" alt="Logo">
+            </div>
+        </div>
+    </header>
+    <!-- MENU -->
+    <nav id="fixed-menu">
+        <div class="logo-navbar">
+            CalculoParaTontos
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a class="active" href="../../index.html">Inicio</a></li>
+            <li><a href="teoremas.html">Teoremas</a></li>
+            <li><a href="ejemplos.html">Ejemplos</a></li>
+            <li><a href="#">Formulas</a></li>
+            <li><a href="https://www.mathsisfun.com/calculus/integration-rules.html" target="_blank">Ayuda</a></li>
+        </ul>
+    </nav>
+    <!-- EJEMPLOS -->
+    <div class="container-page">
+        <section>
+            <div class="title">
+                <h2>Ejemplos de Cálculo Integral</h2>
+            </div>
+            <div class="page-ejemplos">
+                <div class="ejemplo">
+                    <h3>Ejemplo 1: Método de Sustitución</h3>
+                    <p>Problema: Calcular la integral definida de la función \( \int_0^{\pi/4} \sin(2x) \cos(2x) \, dx
+                        \).</p>
+                    <p><strong>Solución:</strong></p>
+                    <img src="../../img/img-integrales/m1.jpeg" alt="Ejemplo 1">
+                    <p>Utilizamos el método de sustitución. Sea \( u = \sin(2x) \), entonces \( du = 2\cos(2x) \, dx \).
+                    </p>
+                    <p>Ahora, reemplazamos en la integral:</p>
+                    <p>
+                        \[ \frac{1}{2} \int_0^{\pi/4} 2u \, du = \frac{1}{2} \left[ u^2 \right]_0^{\pi/4} = \frac{1}{2}
+                        \left( \sin^2\left(\frac{\pi}{2}\right) - \sin^2(0) \right) = \frac{1}{2} \left(1 - 0\right) =
+                        \frac{1}{4} \]
+                    </p>
+                </div>
+
+
+                <div class="ejemplo">
+                    <h3>Ejemplo 2: Método de Sustitución por Partes</h3>
+                    <p>Problema: Calcular la integral definida de la función \( \int_0^1 x\ln(x) \, dx \).</p>
+                    <p><strong>Solución:</strong></p>
+                    <img src="../../img/img-integrales/m1.jpeg" alt="Ejemplo 2">
+                    <p>Usamos el método de sustitución por partes con \( u = \ln(x) \) y \( dv = x \, dx \).</p>
+                    <p>Entonces, \( du = \frac{1}{x} \, dx \) y \( v = \frac{x^2}{2} \).</p>
+                    <p>Aplicamos la fórmula de sustitución por partes:</p>
+                    <p>
+                        \[
+                        \int x\ln(x) \, dx = \frac{x^2}{2}\ln(x) - \int \frac{x^2}{2} \cdot \frac{1}{x} \, dx =
+                        \frac{x^2}{2}\ln(x) - \frac{1}{2}\int x \, dx
+                        \]
+                    </p>
+                    <p>Integramos y evaluamos en los límites:</p>
+                    <p>
+                        \[
+                        \left[ \frac{x^2}{2}\ln(x) - \frac{1}{2} \cdot \frac{x^2}{2} \right]_0^1 = \left[
+                        \frac{1}{2}\ln(1) - \frac{1}{4} - \left(0 - \frac{0}{4}\right) \right] = \frac{1}{2} \cdot 0 -
+                        \frac{1}{4} = -\frac{1}{4}
+                        \]
+                    </p>
+                </div>
+
+
+                <div class="ejemplo">
+                    <h3>Ejemplo 3: Método de Integración por Sustitución</h3>
+                    <p>Problema: Calcular la integral definida de la función \( \int_1^2 e^{2x} + e^x \, dx \).</p>
+                    <p><strong>Solución:</strong></p>
+                    <img src="../../img/img-integrales/m1.jpeg" alt="Ejemplo 3">
+                    <p>Usamos el método de integración por sustitución. Sea \( u = e^x \), entonces \( du = e^x \, dx
+                        \).</p>
+                    <p>Entonces, reemplazamos en la integral:</p>
+                    <p>
+                        \[
+                        \int (e^{2x} + e^x) \, dx = \int e^{2x} \, dx + \int e^x \, dx = \frac{1}{2}\int du + \int u \,
+                        du
+                        \]
+                    </p>
+                    <p>Usamos la fórmula de arco tangente inverso:</p>
+                    <p>
+                        \[
+                        \left[ \frac{u^2}{2} + \ln|u| \right]_1^2 = \left[ \frac{2^2}{2} + \ln|2| - \left(\frac{1^2}{2}
+                        + \ln|1|\right)\right] = 4 + \ln(2) - \left(\frac{1}{2} + 0\right) = \frac{7}{2} + \ln(2)
+                        \]
+                    </p>
+                </div>
+
+
+                <div class="ejemplo">
+                    <h3>Ejemplo 4: Método de Integración por Fracciones Parciales</h3>
+                    <p>Problema: Calcular la integral definida de la función \( \int_0^1 \frac{x(x+1)}{x^2+3x+2} \, dx
+                        \).</p>
+                    <p><strong>Solución:</strong></p>
+                    <img src="../../img/img-integrales/m1.jpeg" alt="Ejemplo 4">
+                    <p>Usamos el método de integración por fracciones parciales. Descomponemos la función en fracciones
+                        parciales:</p>
+                    <p>
+                        \[
+                        \frac{x(x+1)}{x^2+3x+2} = \frac{A}{x+1} + \frac{B}{x+2}
+                        \]
+                    </p>
+                    <p>Luego, encontramos los valores de \( A \) y \( B \) y descomponemos la integral:</p>
+                    <p>
+                        \[
+                        \int \frac{x(x+1)}{x^2+3x+2} \, dx = \int \left(\frac{A}{x+1} + \frac{B}{x+2}\right) \, dx
+                        \]
+                    </p>
+                    <p>Resolvemos las fracciones parciales:</p>
+                    <p>
+                        \[
+                        \int \frac{A}{x+1} \, dx + \int \frac{B}{x+2} \, dx
+                        \]
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer class="pie-pagina">
+            <div class="grupo-1">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="../../img/asset/logo-calculoparatontos.png" alt="Logo de SLee Dw">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+                </div>
+                <div class="box">
+                    <h2>SIGUENOS</h2>
+                    <div class="red-social">
+                        <a href="#" class="fab fa-facebook"></a>
+                        <a href="#" class="fab fa-google"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <small>&copy; 2023 <b>CalculoParaTontos</b> - Todos los Derechos Reservados.</small>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../../controller/fuctions.js"></script>
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+</html>
